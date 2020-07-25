@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Hola mundo con Vue.js</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
+</head>
+
+<body>
+
+
+  <div id="app">
+
+    <h2>{{titulo}}</h2>
+    <!--llama a la propiedad dentro de data del js-->
+
+    <input type="text" v-model='nuevoProducto' @keyup.enter='agregarProducto'>
+    <!--v-model conecta input index con main.js-->
+    <!--@keyup para asociar una tecla a la accion del método-->
+    <button v-on:click="agregarProducto" class="btn btn-primary">Agregar</button>
+    <!--v-on:click llama al metodo del main.js-->
+
+    <ul>
+      <li v-for="producto of productos">
+        <input type="number" v-model.number='producto.cantidad'>
+        <!--para aumentar la cantidad de productos debe ser number-->
+        {{producto.nombre}}
+        <button @click="producto.cantidad++" class="btn btn-secondary">+</button>
+        <!--@click para que al clickear aumente-->
+        <span v-if='producto.cantidad === 0'> - Sin Stock</span>
+      </li>
+    </ul>
+
+    <h4>TOTAL : {{sumarProductos}}</h4>
+    <!--asociado al computed del main.js-->
+
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  <script src="methods_v-model_evento-click.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
