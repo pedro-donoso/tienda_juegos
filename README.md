@@ -1,4 +1,4 @@
-![Vista previa:\](https://drive.google.com/file/d/1LNTY33qG9uHc9s9JbDXWrs0aZ0AZL34R/view?usp=sharing)
+![Vista previa:\](https://photos.google.com/album/AF1QipOE-hL01bRlgmT4sZAiF3JTNxFyNrCjAUylIBGW/photo/AF1QipM2H4NaDB6uu6ERSdLbwh5uO5yMXnALghBKW4ii)
 
 ### https://costo-materiales.netlify.app/
 
